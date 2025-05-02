@@ -1,0 +1,76 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://drpdhwp0ewgo"]
+
+[ext_resource type="FontFile" uid="uid://b5dgt6qld4rl3" path="res://fuentes/Pixeboy.ttf" id="1_p7qvh"]
+[ext_resource type="Texture2D" uid="uid://hyrxivxou21i" path="res://imgs/fondos/back_ice.jpg" id="2_rq7jm"]
+[ext_resource type="Texture2D" uid="uid://dosw53qpm12rf" path="res://imgs/interfaces/panel-transparent-center-028.png" id="3_ie3m8"]
+[ext_resource type="Texture2D" uid="uid://dk5tng8iuxh8h" path="res://imgs/interfaces/panel-000.png" id="3_vwit3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rq7jm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwit3"]
+texture = ExtResource("2_rq7jm")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ie3m8"]
+load_path = "res://.godot/imported/return2.png-f773d03f24f95b4d4413e16ee29e46ff.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ie3m8"]
+texture = SubResource("CompressedTexture2D_ie3m8")
+expand_margin_left = 590.0
+expand_margin_top = 1267.0
+expand_margin_right = 1169.0
+expand_margin_bottom = 1138.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhwii"]
+texture = ExtResource("3_ie3m8")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+modulate_color = Color(0.452452, 0, 0.0723507, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odbv3"]
+texture = ExtResource("3_vwit3")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+modulate_color = Color(0.382553, 0.677513, 0.124451, 1)
+
+[resource]
+Button/font_sizes/font_size = 42
+Button/fonts/font = ExtResource("1_p7qvh")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 42
+Label/fonts/font = ExtResource("1_p7qvh")
+Label/styles/normal = SubResource("StyleBoxEmpty_rq7jm")
+Panel_interfaz_end_game/base_type = &"PanelContainer"
+Panel_interfaz_end_game/styles/panel = SubResource("StyleBoxTexture_vwit3")
+return_button/base_type = &"Button"
+return_button/colors/font_color = Color(0, 0, 0, 1)
+return_button/icons/icon = null
+return_button/styles/normal = SubResource("StyleBoxTexture_ie3m8")
+titleLoseLabel/base_type = &"Label"
+titleLoseLabel/colors/font_outline_color = Color(0.733002, 2.75549e-06, 6.73831e-07, 1)
+titleLoseLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+titleLoseLabel/constants/outline_size = 10
+titleLoseLabel/constants/shadow_offset_x = 6
+titleLoseLabel/constants/shadow_offset_y = 6
+titleLoseLabel/constants/shadow_outline_size = 5
+titleLoseLabel/font_sizes/font_size = 62
+titleLoseLabel/styles/normal = SubResource("StyleBoxTexture_fhwii")
+titleWinLabel/base_type = &"Label"
+titleWinLabel/colors/font_outline_color = Color(0.0255819, 0.366091, 0.495748, 0.643137)
+titleWinLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+titleWinLabel/constants/outline_size = 10
+titleWinLabel/constants/shadow_offset_x = 6
+titleWinLabel/constants/shadow_offset_y = 6
+titleWinLabel/constants/shadow_outline_size = 5
+titleWinLabel/font_sizes/font_size = 62
+titleWinLabel/styles/normal = SubResource("StyleBoxTexture_odbv3")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://t0o22o3be6pk"]
+
+[ext_resource type="Script" uid="uid://dyrfbksslrisc" path="res://Juego/interfaz_control_buttons.gd" id="1_5dkod"]
+[ext_resource type="Texture2D" uid="uid://bmpwfolgyjgbk" path="res://imgs/control_botones/flatDark23.png" id="2_51jht"]
+[ext_resource type="Texture2D" uid="uid://cj11ogxrygmu7" path="res://imgs/control_botones/flatDark24.png" id="3_4llio"]
+[ext_resource type="Texture2D" uid="uid://dgr486nwky0oh" path="res://imgs/control_botones/flatDark25.png" id="4_msf8f"]
+[ext_resource type="Texture2D" uid="uid://g404agogcc2m" path="res://imgs/control_botones/flatDark26.png" id="5_438s0"]
+
+[node name="Control_buttons" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 267.0
+offset_top = -222.0
+offset_right = 267.0
+offset_bottom = -150.0
+grow_vertical = 0
+script = ExtResource("1_5dkod")
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(-190, -90)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_51jht")
+action = "izquierda"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(190, -90)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("3_4llio")
+action = "derecha"
+
+[node name="top" type="TouchScreenButton" parent="."]
+position = Vector2(0, -200)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_msf8f")
+action = "arriba"
+
+[node name="down" type="TouchScreenButton" parent="."]
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_438s0")
+action = "abajo"
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="released" from="left" to="." method="_on_left_released"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+[connection signal="released" from="right" to="." method="_on_right_released"]
+[connection signal="pressed" from="top" to="." method="_on_top_pressed"]
+[connection signal="released" from="top" to="." method="_on_top_released"]
+[connection signal="pressed" from="down" to="." method="_on_down_pressed"]
+[connection signal="released" from="down" to="." method="_on_down_released"]

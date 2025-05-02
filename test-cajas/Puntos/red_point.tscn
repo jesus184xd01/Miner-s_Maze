@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0b1orvc1aqcr"]
+
+[ext_resource type="Texture2D" uid="uid://dok37t534uovh" path="res://imgs/decoracion/environment_05.png" id="1_0hxkm"]
+[ext_resource type="Script" uid="uid://bko8jl6dbq75n" path="res://Puntos/red_point.gd" id="1_d1pk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64gcj"]
+size = Vector2(64, 64)
+
+[node name="point" type="StaticBody2D" groups=["points"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_d1pk2")
+
+[node name="Crate02" type="Sprite2D" parent="."]
+texture = ExtResource("1_0hxkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_64gcj")

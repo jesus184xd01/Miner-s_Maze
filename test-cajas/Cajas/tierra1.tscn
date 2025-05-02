@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b32alaxk12o4l"]
+
+[ext_resource type="Texture2D" uid="uid://d34gocxjglxqi" path="res://imgs/suelo/tile_0080.png" id="1_ghth5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c3nf"]
+size = Vector2(18.7973, 15.3846)
+
+[node name="rigid" type="RigidBody2D"]
+scale = Vector2(2.71429, 2.56433)
+collision_layer = 4
+collision_mask = 3
+
+[node name="Tile0080" type="Sprite2D" parent="."]
+texture = ExtResource("1_ghth5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.478489, -2.38419e-07)
+scale = Vector2(0.795696, 0.879999)
+shape = SubResource("RectangleShape2D_1c3nf")

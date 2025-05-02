@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://jgfk5834e7w3"]
+
+[ext_resource type="VideoStream" uid="uid://cnqhbftruuj2e" path="res://imgs/fondos/sword_minecraft.ogv" id="1_hmv5n"]
+[ext_resource type="Script" uid="uid://h071fu8bkl2v" path="res://Juego/interfaz_inicio.gd" id="1_x6we6"]
+[ext_resource type="Theme" uid="uid://dvn4o5wjsqjh3" path="res://themes/theme_inicio.tres" id="2_wobqu"]
+[ext_resource type="Script" uid="uid://cscsdf2p0dngr" path="res://Juego/title_label.gd" id="3_lti2r"]
+
+[node name="Interfaz_inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x6we6")
+
+[node name="FondoVideo" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_hmv5n")
+autoplay = true
+expand = true
+loop = true
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -304.0
+offset_right = 184.0
+offset_bottom = -261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_wobqu")
+text = "Miner's Maze"
+script = ExtResource("3_lti2r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -5.0
+offset_right = 197.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_wobqu")
+
+[node name="jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="selec" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Changue character"
+
+[node name="options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/selec" to="." method="_on_selec_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]

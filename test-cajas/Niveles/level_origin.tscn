@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpa76qhev6svx"]
+
+[ext_resource type="Script" uid="uid://8joslup2news" path="res://Niveles/level.gd" id="1_f3rft"]
+[ext_resource type="PackedScene" uid="uid://87eefrtjni02" path="res://Juego/background_game.tscn" id="2_k0q4n"]
+[ext_resource type="PackedScene" uid="uid://b6oru4xdv478s" path="res://pisos/arena_floor.tscn" id="3_txnpi"]
+[ext_resource type="PackedScene" uid="uid://b0b1orvc1aqcr" path="res://Puntos/red_point.tscn" id="4_4x3dp"]
+[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man_right.tscn" id="5_kqvs8"]
+[ext_resource type="PackedScene" uid="uid://br5ta3woshc35" path="res://Cajas/brown_box.tscn" id="6_f1bna"]
+[ext_resource type="Script" uid="uid://dd2h55g6hqiai" path="res://Juego/game_controller.gd" id="7_qvoa0"]
+[ext_resource type="PackedScene" uid="uid://xvb5gkug6jdh" path="res://Juego/interfaz_juego.tscn" id="8_bh3na"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(0, 8)
+script = ExtResource("1_f3rft")
+
+[node name="background_game" parent="." instance=ExtResource("2_k0q4n")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Floors" type="Node2D" parent="."]
+position = Vector2(456, 248)
+
+[node name="point" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(345, 160)
+
+[node name="point2" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(409, 160)
+
+[node name="point3" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(281, 224)
+
+[node name="point4" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(345, 224)
+
+[node name="point5" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(409, 224)
+
+[node name="point6" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(473, 224)
+
+[node name="point7" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(281, 288)
+
+[node name="point8" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(345, 288)
+
+[node name="point9" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(409, 288)
+
+[node name="point10" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(473, 288)
+
+[node name="point11" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(281, 352)
+
+[node name="point12" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(345, 352)
+
+[node name="point13" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(409, 352)
+
+[node name="point14" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(473, 352)
+
+[node name="point15" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(537, 352)
+
+[node name="point16" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(601, 352)
+
+[node name="point17" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(281, 416)
+
+[node name="point18" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(345, 416)
+
+[node name="point19" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(409, 416)
+
+[node name="point20" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(473, 416)
+
+[node name="point21" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(537, 416)
+
+[node name="point22" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(601, 416)
+
+[node name="point23" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(281, 480)
+
+[node name="point24" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(345, 480)
+
+[node name="point25" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(409, 480)
+
+[node name="point26" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(473, 480)
+
+[node name="point27" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(537, 480)
+
+[node name="point28" parent="Floors" instance=ExtResource("3_txnpi")]
+position = Vector2(601, 480)
+
+[node name="Points" type="Node2D" parent="."]
+position = Vector2(200, 248)
+
+[node name="point" parent="Points" instance=ExtResource("4_4x3dp")]
+position = Vector2(665, 160)
+
+[node name="point2" parent="Points" instance=ExtResource("4_4x3dp")]
+position = Vector2(665, 480)
+
+[node name="point3" parent="Points" instance=ExtResource("4_4x3dp")]
+position = Vector2(793, 480)
+
+[node name="PJ" parent="." instance=ExtResource("5_kqvs8")]
+position = Vector2(800, 600)
+espera = 0.4
+
+[node name="Boxes" type="Node2D" parent="."]
+position = Vector2(200, 248)
+
+[node name="RigidBody2D" parent="Boxes" instance=ExtResource("6_f1bna")]
+position = Vector2(729, 416)
+
+[node name="RigidBody2D2" parent="Boxes" instance=ExtResource("6_f1bna")]
+position = Vector2(729, 480)
+
+[node name="RigidBody2D3" parent="Boxes" instance=ExtResource("6_f1bna")]
+position = Vector2(793, 352)
+
+[node name="GameController" type="Node2D" parent="."]
+position = Vector2(-112, 56)
+script = ExtResource("7_qvoa0")
+time_initial = 1000
+
+[node name="Timer" type="Timer" parent="GameController"]
+autostart = true
+
+[node name="interfaz" parent="." instance=ExtResource("8_bh3na")]
+
+[connection signal="time_updated" from="GameController" to="interfaz" method="_on_game_controller_time_updated"]
+[connection signal="timeout" from="GameController/Timer" to="GameController" method="_on_timer_timeout"]

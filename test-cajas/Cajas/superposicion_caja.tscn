@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4hhbfrtbofxr"]
+
+[ext_resource type="Texture2D" uid="uid://dv02njjfkajvk" path="res://imgs/interfaces/panel-border-000.png" id="1_6sj27"]
+
+[node name="superposicion_caja" type="Sprite2D"]
+scale = Vector2(1.33, 1.33)
+texture = ExtResource("1_6sj27")

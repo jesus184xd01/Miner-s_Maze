@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsyhs5x6057dk"]
+
+[ext_resource type="Script" uid="uid://cjagcpeomgu2n" path="res://Juego/interfaz_lose.gd" id="1_b14jh"]
+[ext_resource type="Theme" uid="uid://vrtl02te16pc" path="res://themes/theme_win.tres" id="2_y2id7"]
+[ext_resource type="Theme" uid="uid://drpdhwp0ewgo" path="res://themes/theme_juego.tres" id="3_4awck"]
+[ext_resource type="PackedScene" uid="uid://bm6a7wkfig084" path="res://botones/list_button.tscn" id="4_awebp"]
+[ext_resource type="PackedScene" uid="uid://f4niqragqo11" path="res://botones/return_button.tscn" id="5_6tknm"]
+[ext_resource type="PackedScene" uid="uid://clipsvwuhf6tm" path="res://botones/home_button.tscn" id="5_y2id7"]
+
+[node name="Interfaz_lose" type="CanvasLayer"]
+script = ExtResource("1_b14jh")
+
+[node name="PcontainerElements" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -139.5
+offset_right = 123.0
+offset_bottom = 139.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_y2id7")
+
+[node name="VcontainerAll" type="VBoxContainer" parent="PcontainerElements"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PcontainerElements/VcontainerAll"]
+layout_mode = 2
+theme = ExtResource("3_4awck")
+theme_type_variation = &"titleLoseLabel"
+text = "Game over"
+horizontal_alignment = 1
+
+[node name="HcontainerScore" type="HBoxContainer" parent="PcontainerElements/VcontainerAll"]
+layout_mode = 2
+
+[node name="ScoreLabel1" type="Label" parent="PcontainerElements/VcontainerAll/HcontainerScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Score:"
+horizontal_alignment = 1
+
+[node name="ScoreLabel2" type="Label" parent="PcontainerElements/VcontainerAll/HcontainerScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="HcontainerTime" type="HBoxContainer" parent="PcontainerElements/VcontainerAll"]
+layout_mode = 2
+
+[node name="TimeLabel1" type="Label" parent="PcontainerElements/VcontainerAll/HcontainerTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Time:"
+horizontal_alignment = 1
+
+[node name="TimeLabel2" type="Label" parent="PcontainerElements/VcontainerAll/HcontainerTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="Hbotones" type="HBoxContainer" parent="PcontainerElements/VcontainerAll"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="list_button" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("4_awebp")]
+layout_mode = 2
+
+[node name="home_button" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("5_y2id7")]
+layout_mode = 2
+
+[node name="return_button" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("5_6tknm")]
+layout_mode = 2

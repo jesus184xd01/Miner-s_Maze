@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfeldn6tdakqx"]
+
+[ext_resource type="Texture2D" uid="uid://cqycqxsugy1pe" path="res://imgs/botones/pause1.png" id="1_mdye1"]
+[ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_s1b2j"]
+
+[node name="pause_button" type="Button"]
+offset_right = 64.0
+offset_bottom = 64.0
+icon = ExtResource("1_mdye1")
+flat = true
+script = ExtResource("2_s1b2j")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://wpft4n3g4axt"]
+
+[ext_resource type="Texture2D" uid="uid://c8ioovbpn774s" path="res://imgs/botones/back1.png" id="1_hh478"]
+[ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_7goof"]
+
+[node name="back_button" type="Button"]
+offset_right = 64.0
+offset_bottom = 64.0
+icon = ExtResource("1_hh478")
+flat = true
+script = ExtResource("2_7goof")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

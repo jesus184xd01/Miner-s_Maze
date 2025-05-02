@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://ccwul3ec5tus1"]
+
+[ext_resource type="Script" uid="uid://8joslup2news" path="res://Niveles/level.gd" id="1_lts1t"]
+[ext_resource type="Script" uid="uid://dd2h55g6hqiai" path="res://Juego/game_controller.gd" id="2_2w5e3"]
+[ext_resource type="PackedScene" uid="uid://b2noh2iwhu2aq" path="res://Juego/background_game.tscn" id="3_thcj7"]
+[ext_resource type="Texture2D" uid="uid://b53cx2hgkmicn" path="res://imgs/suelo/ground_06.png" id="4_hk0ud"]
+[ext_resource type="PackedScene" uid="uid://b0b1orvc1aqcr" path="res://Puntos/red_point.tscn" id="5_dykl1"]
+[ext_resource type="PackedScene" uid="uid://br5ta3woshc35" path="res://Cajas/brown_box.tscn" id="6_jsqga"]
+[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man_right.tscn" id="7_5h8st"]
+[ext_resource type="Texture2D" uid="uid://dk8tvri3lfar3" path="res://imgs/decoracion/crate_06.png" id="8_ir10i"]
+[ext_resource type="PackedScene" uid="uid://xvb5gkug6jdh" path="res://Juego/interfaz_juego.tscn" id="9_drhs1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_526vn"]
+texture = ExtResource("4_hk0ud")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ab6pk"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_526vn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iqur7"]
+texture = ExtResource("8_ir10i")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_526vn"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_iqur7")
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_lts1t")
+
+[node name="GameController" type="Node2D" parent="."]
+script = ExtResource("2_2w5e3")
+
+[node name="Timer" type="Timer" parent="GameController"]
+autostart = true
+
+[node name="background_game" parent="." instance=ExtResource("3_thcj7")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Floors"]
+tile_set = SubResource("TileSet_ab6pk")
+format = 2
+layer_0/tile_data = PackedInt32Array(393229, 0, 0, 393230, 0, 0, 327694, 0, 0, 327695, 0, 0, 393231, 0, 0, 458767, 0, 0, 524303, 0, 0, 589839, 0, 0, 655375, 0, 0, 655376, 0, 0, 589840, 0, 0, 524304, 0, 0, 524302, 0, 0, 458766, 0, 0, 458765, 0, 0, 524301, 0, 0, 589837, 0, 0, 655373, 0, 0, 655374, 0, 0, 589838, 0, 0)
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="point" parent="Points" instance=ExtResource("5_dykl1")]
+position = Vector2(864, 608)
+
+[node name="point2" parent="Points" instance=ExtResource("5_dykl1")]
+position = Vector2(864, 672)
+
+[node name="point3" parent="Points" instance=ExtResource("5_dykl1")]
+position = Vector2(928, 672)
+
+[node name="point4" parent="Points" instance=ExtResource("5_dykl1")]
+position = Vector2(1056, 672)
+
+[node name="Boxes" type="Node2D" parent="."]
+
+[node name="brown_box" parent="Boxes" instance=ExtResource("6_jsqga")]
+position = Vector2(928, 416)
+
+[node name="brown_box2" parent="Boxes" instance=ExtResource("6_jsqga")]
+position = Vector2(928, 480)
+
+[node name="brown_box3" parent="Boxes" instance=ExtResource("6_jsqga")]
+position = Vector2(992, 544)
+
+[node name="brown_box4" parent="Boxes" instance=ExtResource("6_jsqga")]
+position = Vector2(928, 608)
+
+[node name="PJ" parent="." instance=ExtResource("7_5h8st")]
+position = Vector2(864, 416)
+espera = 0.4
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="wall" type="TileMap" parent="Walls"]
+tile_set = SubResource("TileSet_526vn")
+format = 2
+layer_0/tile_data = PackedInt32Array(393228, 1, 0, 458764, 1, 0, 524300, 1, 0, 589836, 1, 0, 655372, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 655377, 1, 0, 589841, 1, 0, 524305, 1, 0, 458769, 1, 0, 458768, 1, 0, 393232, 1, 0, 327696, 1, 0, 262160, 1, 0, 262159, 1, 0, 262158, 1, 0, 262157, 1, 0, 327693, 1, 0, 327692, 1, 0, 458765, 1, 0, 524301, 1, 0)
+
+[node name="interfaz" parent="." instance=ExtResource("9_drhs1")]
+
+[connection signal="time_updated" from="GameController" to="interfaz" method="_on_game_controller_time_updated"]
+[connection signal="timeout" from="GameController/Timer" to="GameController" method="_on_timer_timeout"]

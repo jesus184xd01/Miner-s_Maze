@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://f4niqragqo11"]
+
+[ext_resource type="Texture2D" uid="uid://cesia5y4h7bga" path="res://imgs/botones/return1.png" id="1_0ybme"]
+[ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_2hyd6"]
+
+[node name="return_button" type="Button"]
+offset_right = 64.0
+offset_bottom = 64.0
+icon = ExtResource("1_0ybme")
+flat = true
+script = ExtResource("2_2hyd6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://vrtl02te16pc"]
+
+[ext_resource type="Texture2D" uid="uid://dosw53qpm12rf" path="res://imgs/interfaces/panel-transparent-center-028.png" id="1_excug"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjgeu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dhxsh"]
+texture = ExtResource("1_excug")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+modulate_color = Color(0, 0.505882, 0.505882, 1)
+
+[resource]
+HBoxContainer/constants/separation = 26
+Label/constants/outline_size = 10
+Label/styles/normal = SubResource("StyleBoxTexture_cjgeu")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_dhxsh")
+VBoxContainer/constants/separation = 34
+titleLabel/base_type = &"Label"
+titleLabel/styles/normal = null

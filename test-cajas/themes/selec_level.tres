@@ -1,0 +1,40 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d1khvlrbvvmhv"]
+
+[ext_resource type="Texture2D" uid="uid://cd5klfs40u0yc" path="res://imgs/interfaces/splat03.png" id="1_ij68e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ij68e"]
+texture = ExtResource("1_ij68e")
+texture_margin_left = 62.0
+texture_margin_top = 83.0
+texture_margin_right = 83.0
+texture_margin_bottom = 83.0
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ko1rq"]
+texture = ExtResource("1_ij68e")
+texture_margin_left = 62.0
+texture_margin_top = 83.0
+texture_margin_right = 83.0
+texture_margin_bottom = 83.0
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+modulate_color = Color(0.309903, 0.519463, 1, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ij68e"]
+load_path = "res://.godot/imported/return1.png-3529d05fcf1ac166f506ef30634c5e9d.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tokr"]
+texture = SubResource("CompressedTexture2D_ij68e")
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxTexture_ij68e")
+Button/styles/normal = SubResource("StyleBoxTexture_ko1rq")
+returnBoton/base_type = &"Button"
+returnBoton/styles/normal = SubResource("StyleBoxTexture_2tokr")

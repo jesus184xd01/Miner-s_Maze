@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2m42ksdcvw4f"]
+
+[ext_resource type="Texture2D" uid="uid://dk8tvri3lfar3" path="res://imgs/decoracion/crate_06.png" id="1_hcprb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64gcj"]
+size = Vector2(64, 64)
+
+[node name="iron_block" type="StaticBody2D"]
+collision_mask = 6
+
+[node name="Crate02" type="Sprite2D" parent="."]
+texture = ExtResource("1_hcprb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.96, 0.96)
+shape = SubResource("RectangleShape2D_64gcj")

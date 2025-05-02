@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmj87f03j3had"]
+
+[sub_resource type="GDScript" id="GDScript_t6kna"]
+script/source = "class_name Interfaz_finish
+extends CanvasLayer
+
+
+func _on_return_pressed() -> void:
+	get_tree().change_scene_to_file(GLOBAL.escene_level())
+
+
+func _on_selecc_pressed() -> void:
+	get_tree().change_scene_to_file(GLOBAL.scene_prox)
+"
+
+[node name="Scene_finish" type="CanvasLayer"]
+script = SubResource("GDScript_t6kna")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.5
+offset_top = -25.0
+offset_right = 122.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"Panel_interfaz_end_game"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="selecc" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Seleccionar nivel"
+
+[node name="return" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volver a jugar"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/selecc" to="." method="_on_selecc_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/return" to="." method="_on_return_pressed"]

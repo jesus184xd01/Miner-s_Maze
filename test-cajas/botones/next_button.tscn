@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d31q55ok6qpc8"]
+
+[ext_resource type="Texture2D" uid="uid://cajmdyba3j7xg" path="res://imgs/botones/next.png" id="1_2br23"]
+[ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_y7b76"]
+
+[node name="next_button" type="Button"]
+offset_right = 64.0
+offset_bottom = 64.0
+icon = ExtResource("1_2br23")
+flat = true
+script = ExtResource("2_y7b76")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

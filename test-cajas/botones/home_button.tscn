@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://clipsvwuhf6tm"]
+
+[ext_resource type="Texture2D" uid="uid://b638umtfaeba6" path="res://imgs/botones/home1.png" id="1_niwv8"]
+[ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_go8uy"]
+
+[node name="home_button" type="Button"]
+offset_right = 64.0
+offset_bottom = 64.0
+icon = ExtResource("1_niwv8")
+flat = true
+script = ExtResource("2_go8uy")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

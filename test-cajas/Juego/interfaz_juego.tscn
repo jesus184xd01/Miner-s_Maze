@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://xvb5gkug6jdh"]
+
+[ext_resource type="Script" uid="uid://dg413dejbn5aa" path="res://Juego/interfaz_juuego.gd" id="1_r23gf"]
+[ext_resource type="PackedScene" uid="uid://f4niqragqo11" path="res://botones/return_button.tscn" id="2_7vc85"]
+[ext_resource type="PackedScene" uid="uid://wpft4n3g4axt" path="res://botones/back_button.tscn" id="3_0pa5b"]
+[ext_resource type="PackedScene" uid="uid://bfeldn6tdakqx" path="res://botones/pause_button.tscn" id="4_7vc85"]
+[ext_resource type="PackedScene" uid="uid://t0o22o3be6pk" path="res://Juego/interfaz_control_buttons.tscn" id="5_0pa5b"]
+
+[node name="interfaz_juego" type="CanvasLayer"]
+script = ExtResource("1_r23gf")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 33.0
+offset_top = 35.0
+offset_right = 452.0
+offset_bottom = 75.0
+theme_override_constants/separation = 37
+
+[node name="LevelLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Level"
+vertical_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "TIME: 1000"
+
+[node name="PushesLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PUSHES:  0"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -264.0
+offset_top = 29.0
+offset_right = -36.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_constants/separation = 14
+
+[node name="back_button" parent="HBoxContainer" instance=ExtResource("3_0pa5b")]
+layout_mode = 2
+
+[node name="return_button" parent="HBoxContainer" instance=ExtResource("2_7vc85")]
+layout_mode = 2
+
+[node name="pause_button" parent="HBoxContainer" instance=ExtResource("4_7vc85")]
+layout_mode = 2
+
+[node name="Control_buttons" parent="." instance=ExtResource("5_0pa5b")]
+
+[connection signal="pressed" from="HBoxContainer/back_button" to="." method="_on_back_button_pressed"]

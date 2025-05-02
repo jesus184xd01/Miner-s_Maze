@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2uxksom34lk5"]
+
+[ext_resource type="Texture2D" uid="uid://du48gww281y2u" path="res://imgs/pjs/tile_0019.png" id="1_cmx65"]
+[ext_resource type="Script" uid="uid://dtssnvee0xh4o" path="res://Cajas/character_body_2d.gd" id="1_i35qw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmx65"]
+size = Vector2(17.653, 42.6022)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(27, 5)
+scale = Vector2(-1, 1.36)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_i35qw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(1.38796, 1.11951)
+texture = ExtResource("1_cmx65")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.493937, 5.49379)
+rotation = -0.0122779
+scale = Vector2(0.962934, 0.258183)
+shape = SubResource("RectangleShape2D_cmx65")

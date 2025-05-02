@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://br5ta3woshc35"]
+
+[ext_resource type="Script" uid="uid://belvrlwwq8smg" path="res://Cajas/brown_box.gd" id="1_64gcj"]
+[ext_resource type="Texture2D" uid="uid://ds8ljf28spb8r" path="res://imgs/decoracion/crate_02.png" id="1_nseho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64gcj"]
+size = Vector2(64, 64)
+
+[node name="brown_box" type="CharacterBody2D" groups=["cajas"]]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_64gcj")
+
+[node name="Crate02" type="Sprite2D" parent="."]
+texture = ExtResource("1_nseho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_64gcj")

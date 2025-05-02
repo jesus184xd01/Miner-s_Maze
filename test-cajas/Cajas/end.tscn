@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://btpnxpgaa8nit"]
+
+[ext_resource type="Texture2D" uid="uid://dl5f0w4p6vpx5" path="res://imgs/suelo/end.png" id="1_ewafr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewafr"]
+size = Vector2(19.8148, 4.70778)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_mask = 6
+
+[node name="Tile0080" type="Sprite2D" parent="."]
+texture = ExtResource("1_ewafr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0467573, -0.5)
+scale = Vector2(21.0906, 4.03587)
+shape = SubResource("RectangleShape2D_ewafr")
