@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blam1j8upsee8"]
+
+[ext_resource type="AudioStream" uid="uid://dpv5qkguq0fs" path="res://Sonidos/select_menu.wav" id="1_iomv2"]
+
+[node name="Sonido_SelecMenu" type="AudioStreamPlayer"]
+stream = ExtResource("1_iomv2")
+autoplay = true

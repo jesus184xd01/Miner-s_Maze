@@ -168,8 +168,8 @@ speed = 150
 [node name="animated" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.064, 0.064)
 sprite_frames = SubResource("SpriteFrames_ayo0n")
-animation = &"idle"
-frame_progress = 0.562254
+animation = &"right"
+frame_progress = 0.60377
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.159999, 0)

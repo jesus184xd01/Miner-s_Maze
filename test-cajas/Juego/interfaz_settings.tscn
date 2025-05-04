@@ -1,0 +1,181 @@
+[gd_scene load_steps=12 format=3 uid="uid://dqat3ux5wc48i"]
+
+[ext_resource type="Theme" uid="uid://d2g51arsil5vb" path="res://themes/theme_settings.tres" id="1_q72p2"]
+[ext_resource type="Script" uid="uid://d2ht5ly3okhm5" path="res://Juego/interfaz_settings.gd" id="2_h3c44"]
+[ext_resource type="Theme" uid="uid://drpdhwp0ewgo" path="res://themes/theme_juego.tres" id="2_nyyd7"]
+[ext_resource type="PackedScene" uid="uid://1eeriockthuw" path="res://botones/music_button.tscn" id="2_s10fu"]
+[ext_resource type="PackedScene" uid="uid://bues0ckfs5spn" path="res://botones/voice_button.tscn" id="4_nyyd7"]
+[ext_resource type="PackedScene" uid="uid://f4niqragqo11" path="res://botones/return_button.tscn" id="5_8fgw4"]
+[ext_resource type="PackedScene" uid="uid://clipsvwuhf6tm" path="res://botones/home_button.tscn" id="6_axbxf"]
+[ext_resource type="PackedScene" uid="uid://dwlg8q8l8e5qm" path="res://botones/backsong_button.tscn" id="6_u4huk"]
+[ext_resource type="PackedScene" uid="uid://bm6a7wkfig084" path="res://botones/list_button.tscn" id="7_h3c44"]
+[ext_resource type="PackedScene" uid="uid://dkaaadxduexfn" path="res://botones/nextsong_button.tscn" id="7_x45og"]
+[ext_resource type="PackedScene" uid="uid://yyqqugfe2p1d" path="res://botones/x_button.tscn" id="8_axbxf"]
+
+[node name="interfaz_settings" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_q72p2")
+script = ExtResource("2_h3c44")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.498039)
+
+[node name="PcontainerBackgroundPause" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -337.5
+offset_right = 336.0
+offset_bottom = 337.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginAllelements" type="MarginContainer" parent="PcontainerBackgroundPause"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VMain" type="VBoxContainer" parent="PcontainerBackgroundPause/MarginAllelements"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PcontainerBackgroundPause/MarginAllelements/VMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Pause"
+horizontal_alignment = 1
+
+[node name="PcontainerSounds" type="PanelContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain"]
+layout_mode = 2
+theme = ExtResource("2_nyyd7")
+theme_type_variation = &"PcontainerInterno"
+
+[node name="MarginContainer" type="MarginContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="GridCSounds" type="GridContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="music_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds" instance=ExtResource("2_s10fu")]
+layout_mode = 2
+
+[node name="HScrollMusic" type="HScrollBar" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds"]
+custom_minimum_size = Vector2(250, 65)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="PercentMusicLabel" type="Label" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+theme_type_variation = &"PorcentajeLabel"
+text = "%"
+clip_text = true
+
+[node name="sound_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds" instance=ExtResource("4_nyyd7")]
+layout_mode = 2
+
+[node name="HScrollSound" type="HScrollBar" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds"]
+custom_minimum_size = Vector2(250, 65)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="PercentSoundLabel" type="Label" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+theme_type_variation = &"PorcentajeLabel"
+text = "%"
+clip_text = true
+
+[node name="PcontainerButtons2" type="PanelContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_nyyd7")
+theme_type_variation = &"PcontainerInterno"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons2"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HButtons" type="HBoxContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons2/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="backsong_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons2/MarginContainer2/HButtons" instance=ExtResource("6_u4huk")]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons2/MarginContainer2/HButtons"]
+layout_mode = 2
+text = "Music #"
+
+[node name="nextsong_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons2/MarginContainer2/HButtons" instance=ExtResource("7_x45og")]
+layout_mode = 2
+
+[node name="PcontainerButtons" type="PanelContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_nyyd7")
+theme_type_variation = &"PcontainerInterno"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HButtons" type="HBoxContainer" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="return_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons/MarginContainer2/HButtons" instance=ExtResource("5_8fgw4")]
+layout_mode = 2
+
+[node name="home_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons/MarginContainer2/HButtons" instance=ExtResource("6_axbxf")]
+layout_mode = 2
+
+[node name="list_button" parent="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons/MarginContainer2/HButtons" instance=ExtResource("7_h3c44")]
+layout_mode = 2
+
+[node name="x_button" parent="." instance=ExtResource("8_axbxf")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 216.0
+offset_top = -348.0
+offset_right = 288.0
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+
+[connection signal="value_changed" from="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds/HScrollMusic" to="." method="_on_h_scroll_music_value_changed"]
+[connection signal="value_changed" from="PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds/HScrollSound" to="." method="_on_h_scroll_sound_value_changed"]
+[connection signal="pressed" from="x_button" to="." method="_on_x_button_pressed"]

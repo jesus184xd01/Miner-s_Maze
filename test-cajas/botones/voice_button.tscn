@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c6d7xiilysrwg" path="res://imgs/botones/voice1.png" id="1_i1ugi"]
 [ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_oxk4b"]
 
-[node name="voice_button" type="Button"]
-offset_right = 64.0
-offset_bottom = 64.0
+[node name="sound_button" type="Button"]
+offset_right = 72.0
+offset_bottom = 72.0
 icon = ExtResource("1_i1ugi")
 flat = true
 script = ExtResource("2_oxk4b")

@@ -64,7 +64,7 @@ horizontal_alignment = 1
 
 [node name="Hbotones" type="HBoxContainer" parent="PcontainerElements/VcontainerAll"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="list_button" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("2_j7ass")]
@@ -73,5 +73,5 @@ layout_mode = 2
 [node name="return_button" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("3_j7ass")]
 layout_mode = 2
 
-[node name="next_button2" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("4_ocmen")]
+[node name="next_button" parent="PcontainerElements/VcontainerAll/Hbotones" instance=ExtResource("4_ocmen")]
 layout_mode = 2

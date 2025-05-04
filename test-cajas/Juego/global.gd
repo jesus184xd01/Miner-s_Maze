@@ -5,9 +5,18 @@ const levels = ["res://Niveles/level_1.tscn", "res://Niveles/level_2.tscn", "res
 const scene_win = "res://Juego/interfaz_win.tscn"
 const scene_lose = "res://Juego/interfaz_lose.tscn"
 const scene_prox = "res://proximamente/proximamente.tscn"
-
+const scene_pause = "res://Juego/interfaz_settings.tscn"
 const scene_start = "res://Juego/interfaz_inicio.tscn"
 const scene_select_level = "res://Juego/interfaz_menu_seleccion_niveles.tscn"
+
+#musica y sonido
+const scene_background_music = "res://Audio/background_music.tscn"
+const scene_sonido_selec_menu = "res://Audio/Sonido_SelecMenu.tscn"
+var music_path = "res://musica/A Sweet Smile - Yu-Peng Chen.mp3"
+var music_instantiate: AudioStreamPlayer
+var sound_instantiate: AudioStreamPlayer
+var volume_sound: float = 50
+var volume_music: float = 50
 
 # captura de los segs
 var timer: int
@@ -18,7 +27,7 @@ const time_initial = 1000
 var actual_level: int = 1
 
 func aument_level():
-	if (actual_level + 1) < levels.size():
+	if (actual_level + 1) <= levels.size():
 		actual_level += 1
 
 func escene_level() -> String:
@@ -26,5 +35,6 @@ func escene_level() -> String:
 	return levels[actual_level-1]
 	
 func new_scene_level() -> String:
-	# valor exacto para coincidir respecto al indice
-	return levels[actual_level]
+	aument_level()
+	# valor -1 para coincidir respecto al indice del nivel siguiente
+	return levels[actual_level - 1]

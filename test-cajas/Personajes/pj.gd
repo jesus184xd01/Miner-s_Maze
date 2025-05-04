@@ -8,7 +8,6 @@ extends CharacterBody2D
 var horizontal: int = 0
 var vertical: int = 0
 
-
 func _physics_process(delta: float) -> void:
 	"""
 	En cada frame ejecuta el movimiento del personaje y de la caja

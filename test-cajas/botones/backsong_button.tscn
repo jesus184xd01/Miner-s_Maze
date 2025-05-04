@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwlg8q8l8e5qm"]
+
+[ext_resource type="Texture2D" uid="uid://c6d7xiilysrwg" path="res://imgs/botones/voice1.png" id="1_avcvv"]
+[ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_7g7r8"]
+
+[node name="backsong_button" type="Button"]
+offset_right = 72.0
+offset_bottom = 72.0
+icon = ExtResource("1_avcvv")
+flat = true
+script = ExtResource("2_7g7r8")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

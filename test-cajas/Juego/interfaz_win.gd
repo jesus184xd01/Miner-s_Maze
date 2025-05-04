@@ -11,10 +11,3 @@ func _ready() -> void:
 	# asignacion a los Label
 	scoreLabel.text = str(round(score))
 	timeLabel.text = str(GLOBAL.capture_time)
-
-func _on_next_pressed() -> void:
-	get_tree().change_scene_to_file(GLOBAL.new_scene_level())
-	GLOBAL.aument_level()
-
-func _on_return_pressed() -> void:
-	get_tree().change_scene_to_file(GLOBAL.escene_level())

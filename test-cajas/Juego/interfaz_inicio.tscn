@@ -59,6 +59,7 @@ grow_vertical = 2
 theme = ExtResource("2_wobqu")
 
 [node name="jugar" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
 text = "Play"
 

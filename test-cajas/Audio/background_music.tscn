@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cj0ecptk3kieo"]
+
+[node name="Sonido_SelecMenu" type="AudioStreamPlayer"]
+process_mode = 3
+autoplay = true

@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://d2g51arsil5vb"]
+
+[ext_resource type="Texture2D" uid="uid://de06j6ixs70er" path="res://imgs/interfaces/settings_background2.png" id="1_tr4nb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tr4nb"]
+texture = ExtResource("1_tr4nb")
+
+[resource]
+GridContainer/constants/h_separation = 20
+GridContainer/constants/v_separation = 20
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/constants/outline_size = 15
+Label/font_sizes/font_size = 95
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_tr4nb")
+VBoxContainer/constants/separation = 40

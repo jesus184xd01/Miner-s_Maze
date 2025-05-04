@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnby4gqdbbww3"
+path="res://.godot/imported/A Sweet Smile - Yu-Peng Chen.mp3-677b7503bc1e971f1d47b36515120546.mp3str"
+
+[deps]
+
+source_file="res://musica/A Sweet Smile - Yu-Peng Chen.mp3"
+dest_files=["res://.godot/imported/A Sweet Smile - Yu-Peng Chen.mp3-677b7503bc1e971f1d47b36515120546.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

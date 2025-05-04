@@ -12,7 +12,10 @@ func _ready():
 	"""
 	Obtiene los grupos 'points' y 'cajas' del nivel actual.
 	Cada objetivo estara conectado a 2 señales.
+	Carga la musica de fondo y sus valores de volumen.
 	"""
+	load_music()
+	
 	objetivos = get_tree().get_nodes_in_group("points")
 	cajas = get_tree().get_nodes_in_group("cajas")
 	print(objetivos)
@@ -20,6 +23,14 @@ func _ready():
 	for objetivo in objetivos:
 		objetivo.p_activate.connect(_on_point_p_activate)
 		objetivo.p_desactivate.connect(_on_point_p_desactivate)
+
+func load_music():
+	var music_inst = preload(GLOBAL.scene_background_music).instantiate()
+	music_inst.stream = load(GLOBAL.music_path)
+	add_child(music_inst)
+	music_inst.volume_linear = (GLOBAL.volume_music) / 100
+	GLOBAL.music_instantiate = music_inst
+#func adjust_volume(background_music: AudioStreamPlayer):
 
 func winnable():
 	"""

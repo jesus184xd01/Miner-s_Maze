@@ -18,18 +18,18 @@ theme_override_constants/separation = 37
 
 [node name="LevelLabel" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.781383, 0.778529, 1)
 text = "Level"
 vertical_alignment = 1
 
 [node name="TimeLabel" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.781383, 0.778529, 1)
 text = "TIME: 1000"
 
 [node name="PushesLabel" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.781383, 0.778529, 1)
 text = "PUSHES:  0"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -55,3 +55,4 @@ layout_mode = 2
 [node name="Control_buttons" parent="." instance=ExtResource("5_0pa5b")]
 
 [connection signal="pressed" from="HBoxContainer/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/pause_button" to="." method="_on_pause_button_pressed"]

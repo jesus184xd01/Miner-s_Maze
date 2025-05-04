@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://b4ftiy00f0wvk"]
+
+[ext_resource type="Script" uid="uid://8joslup2news" path="res://Niveles/level.gd" id="1_iqur7"]
+[ext_resource type="Texture2D" uid="uid://hyrxivxou21i" path="res://imgs/fondos/back_ice.jpg" id="2_qtj6q"]
+[ext_resource type="PackedScene" uid="uid://4rfbr3gdpfyg" path="res://Juego/game_controller.tscn" id="3_eh2fs"]
+[ext_resource type="Texture2D" uid="uid://b53cx2hgkmicn" path="res://imgs/suelo/ground_06.png" id="3_xuh8p"]
+[ext_resource type="PackedScene" uid="uid://b0b1orvc1aqcr" path="res://Puntos/red_point.tscn" id="4_8mtxv"]
+[ext_resource type="Texture2D" uid="uid://dk8tvri3lfar3" path="res://imgs/decoracion/crate_06.png" id="4_xuh8p"]
+[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man_right.tscn" id="5_2e1o0"]
+[ext_resource type="PackedScene" uid="uid://br5ta3woshc35" path="res://Cajas/brown_box.tscn" id="6_uj23p"]
+[ext_resource type="PackedScene" uid="uid://xvb5gkug6jdh" path="res://Juego/interfaz_juego.tscn" id="8_i7vl2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_526vn"]
+texture = ExtResource("3_xuh8p")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ab6pk"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_526vn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iqur7"]
+texture = ExtResource("4_xuh8p")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_526vn"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_iqur7")
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_iqur7")
+
+[node name="Background_image" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_qtj6q")
+
+[node name="GameController" parent="." instance=ExtResource("3_eh2fs")]
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Floors"]
+tile_set = SubResource("TileSet_ab6pk")
+format = 2
+layer_0/tile_data = PackedInt32Array(589835, 0, 0, 589836, 0, 0, 655372, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 786445, 0, 0, 786444, 0, 0, 786443, 0, 0, 786447, 0, 0, 786448, 0, 0, 720912, 0, 0, 655376, 0, 0, 720911, 0, 0, 655374, 0, 0, 589838, 0, 0, 589837, 0, 0, 524301, 0, 0, 524302, 0, 0, 524300, 0, 0, 524299, 0, 0, 458764, 0, 0, 458765, 0, 0, 786446, 0, 0, 720910, 0, 0, 655375, 0, 0)
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="point" parent="Points" instance=ExtResource("4_8mtxv")]
+position = Vector2(864, 800)
+
+[node name="point2" parent="Points" instance=ExtResource("4_8mtxv")]
+position = Vector2(992, 800)
+
+[node name="point3" parent="Points" instance=ExtResource("4_8mtxv")]
+position = Vector2(864, 480)
+
+[node name="Boxes" type="Node2D" parent="."]
+
+[node name="brown_box" parent="Boxes" instance=ExtResource("6_uj23p")]
+position = Vector2(928, 736)
+
+[node name="brown_box2" parent="Boxes" instance=ExtResource("6_uj23p")]
+position = Vector2(992, 672)
+
+[node name="brown_box3" parent="Boxes" instance=ExtResource("6_uj23p")]
+position = Vector2(928, 800)
+
+[node name="PJ" parent="." instance=ExtResource("5_2e1o0")]
+position = Vector2(800, 672)
+espera = 0.4
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="wall" type="TileMap" parent="Walls"]
+tile_set = SubResource("TileSet_526vn")
+format = 2
+layer_0/tile_data = PackedInt32Array(655371, 1, 0, 655373, 1, 0, 655370, 1, 0, 720906, 1, 0, 786442, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 786449, 1, 0, 720913, 1, 0, 655377, 1, 0, 589841, 1, 0, 589840, 1, 0, 589839, 1, 0, 524303, 1, 0, 458767, 1, 0, 458766, 1, 0, 393230, 1, 0, 393229, 1, 0, 393228, 1, 0, 393227, 1, 0, 458763, 1, 0, 458762, 1, 0, 524298, 1, 0, 589834, 1, 0)
+
+[node name="interfaz" parent="." instance=ExtResource("8_i7vl2")]
+
+[connection signal="time_updated" from="GameController" to="interfaz" method="_on_game_controller_time_updated"]

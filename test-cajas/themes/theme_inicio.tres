@@ -1,9 +1,8 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dvn4o5wjsqjh3"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dvn4o5wjsqjh3"]
 
 [ext_resource type="FontFile" uid="uid://b5dgt6qld4rl3" path="res://fuentes/Pixeboy.ttf" id="1_7gn01"]
 [ext_resource type="Texture2D" uid="uid://dk5tng8iuxh8h" path="res://imgs/interfaces/panel-000.png" id="2_6cqi5"]
 [ext_resource type="Texture2D" uid="uid://cibrkmsj41o08" path="res://imgs/interfaces/panel-transparent-center-000.png" id="2_06why"]
-[ext_resource type="Texture2D" uid="uid://hyrxivxou21i" path="res://imgs/fondos/back_ice.jpg" id="2_h8231"]
 [ext_resource type="Texture2D" uid="uid://baqkbc0f8l3ld" path="res://imgs/interfaces/panel-border-025.png" id="4_06why"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t3awi"]
@@ -12,8 +11,6 @@ texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
-expand_margin_left = 200.0
-expand_margin_right = 200.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06why"]
 texture = ExtResource("2_6cqi5")
@@ -21,8 +18,6 @@ texture_margin_left = 25.0
 texture_margin_top = 25.0
 texture_margin_right = 25.0
 texture_margin_bottom = 25.0
-expand_margin_left = 200.0
-expand_margin_right = 200.0
 modulate_color = Color(0.854902, 0.854902, 0.854902, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svwhs"]
@@ -31,9 +26,6 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwit3"]
-texture = ExtResource("2_h8231")
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
@@ -55,8 +47,6 @@ Label/constants/shadow_outline_size = 6
 Label/font_sizes/font_size = 100
 Label/fonts/font = ExtResource("1_7gn01")
 Label/styles/normal = SubResource("StyleBoxTexture_svwhs")
-Panel_interfaz_end_game/base_type = &"PanelContainer"
-Panel_interfaz_end_game/styles/panel = SubResource("StyleBoxTexture_vwit3")
 VBoxContainer/constants/separation = 25
 vboxInicio/base_type = &"VBoxContainer"
 vboxInicio/constants/separation = 15

@@ -17,3 +17,10 @@ func _on_pj_detect_pushes(pushes: Variant) -> void:
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file(GLOBAL.scene_select_level)
+
+
+func _on_pause_button_pressed() -> void:
+	var scene_pause_inst = preload(GLOBAL.scene_pause).instantiate()
+	add_child(scene_pause_inst)
+	# realizar una pausa global
+	get_tree().paused = true
