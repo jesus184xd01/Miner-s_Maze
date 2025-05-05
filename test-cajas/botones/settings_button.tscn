@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3tvg00qookio"]
 
-[ext_resource type="Texture2D" uid="uid://b7wdlps2cc80o" path="res://imgs/botones/settings1.png" id="1_nheis"]
+[ext_resource type="Texture2D" uid="uid://cxx837cxsvj6x" path="res://imgs/botones/settings1.png" id="1_nheis"]
 [ext_resource type="Script" uid="uid://b2dahridhxwna" path="res://botones/control_buttons.gd" id="2_01afo"]
 
 [node name="settings_button" type="Button"]

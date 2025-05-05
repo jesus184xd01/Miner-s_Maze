@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdalvnkhgycsx"]
+[gd_scene load_steps=7 format=3 uid="uid://cdalvnkhgycsx"]
 
 [ext_resource type="Theme" uid="uid://d1khvlrbvvmhv" path="res://themes/selec_level.tres" id="1_eivik"]
 [ext_resource type="Script" uid="uid://bxi12t6vb8mv6" path="res://Juego/interfaz_menu_seleccion_niveles.gd" id="1_ja56r"]
 [ext_resource type="Texture2D" uid="uid://d2ujgnlgjwrji" path="res://imgs/fondos/cueva.jpg" id="2_t4rpl"]
 [ext_resource type="PackedScene" uid="uid://b3tvg00qookio" path="res://botones/settings_button.tscn" id="4_bakpf"]
 [ext_resource type="PackedScene" uid="uid://clipsvwuhf6tm" path="res://botones/home_button.tscn" id="4_t4rpl"]
+[ext_resource type="PackedScene" uid="uid://bp0xjrt6qj5xr" path="res://Juego/load_scene.tscn" id="6_bakpf"]
 
 [node name="Interfaz_menu_seleccion_niveles" type="Control"]
 layout_mode = 3
@@ -15,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ja56r")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="backgroundImg" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,6 +82,9 @@ layout_mode = 2
 [node name="settings_button" parent="Hbuttons" instance=ExtResource("4_bakpf")]
 layout_mode = 2
 
+[node name="Load_scene" parent="." instance=ExtResource("6_bakpf")]
+
 [connection signal="pressed" from="MarginLevels/VLevels/HLevels/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginLevels/VLevels/HLevels/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="MarginLevels/VLevels/HLevels/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Hbuttons/settings_button" to="." method="_on_settings_button_pressed"]

@@ -7,7 +7,7 @@ var functions := {
 	"pause_button": "nada",
 	"play_button": "nada",
 	"return_button": "return_level",
-	"settings_button": "scene_settings",
+	"settings_button": "nada",
 	"sound_button": "volume_sound",
 	"music_button": "volume_music",
 	"voice_mute_button": "nada",
@@ -31,8 +31,6 @@ func _on_pressed() -> void:
 	Cada vez que es presionado alguno de los botones en el diccionario
 	llama a un metodo en base al nombre del boton
 	"""
-	
-		
 	var name_button = self.name
 	# verificar si el nombre del botón está en el diccionario
 	if functions.has(name_button):
@@ -53,9 +51,9 @@ func return_level() -> void:
 	disabled_pause()
 	get_tree().reload_current_scene()
 
-func scene_settings() -> void:
-	get_tree().change_scene_to_file(GLOBAL.scene_prox)
-
+func scene_options() -> void:
+	return
+	
 func scene_start() -> void:
 	disabled_pause()
 	get_tree().change_scene_to_file(GLOBAL.scene_start)
@@ -68,7 +66,23 @@ func scene_new_level():
 	get_tree().change_scene_to_file(GLOBAL.new_scene_level())
 	
 func back_song():
-	return
+	if GLOBAL.music_instantiate:
+		if GLOBAL.num_song > 1:
+			GLOBAL.num_song -= 1
+		else:
+			GLOBAL.num_song = GLOBAL.songs.size()
+		
+		GLOBAL.music_path = GLOBAL.songs[GLOBAL.num_song - 1]
+		GLOBAL.music_instantiate.stream = load(GLOBAL.music_path)
+		GLOBAL.music_instantiate.play()
 	
 func next_song():
-	return
+	if GLOBAL.music_instantiate:
+		if GLOBAL.num_song < GLOBAL.songs.size():
+			GLOBAL.num_song += 1
+		else:
+			GLOBAL.num_song = 1
+		
+		GLOBAL.music_path = GLOBAL.songs[GLOBAL.num_song - 1]
+		GLOBAL.music_instantiate.stream = load(GLOBAL.music_path)
+		GLOBAL.music_instantiate.play()

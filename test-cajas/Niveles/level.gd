@@ -3,6 +3,8 @@ extends Node2D
 
 signal captured_time(time_actually)
 
+@onready var load_scene: CanvasLayer = $Load_scene
+
 var scene_win = preload(GLOBAL.scene_win)
 var objetivos = []
 var cajas = []

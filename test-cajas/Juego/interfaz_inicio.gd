@@ -12,4 +12,7 @@ func _on_selec_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file(GLOBAL.scene_prox)
+	var scene_options_inst = preload(GLOBAL.scene_options).instantiate()
+	add_child(scene_options_inst)
+	# realizar una pausa global
+	get_tree().paused = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxh4n4y6xmxy4"]
+[gd_scene load_steps=15 format=3 uid="uid://dxh4n4y6xmxy4"]
 
 [ext_resource type="Script" uid="uid://8joslup2news" path="res://Niveles/level.gd" id="1_ej6nf"]
 [ext_resource type="Script" uid="uid://dd2h55g6hqiai" path="res://Juego/game_controller.gd" id="2_qvom1"]
@@ -6,9 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://b53cx2hgkmicn" path="res://imgs/suelo/ground_06.png" id="4_spwk6"]
 [ext_resource type="PackedScene" uid="uid://b0b1orvc1aqcr" path="res://Puntos/red_point.tscn" id="5_uwdme"]
 [ext_resource type="PackedScene" uid="uid://br5ta3woshc35" path="res://Cajas/brown_box.tscn" id="6_onuao"]
-[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man_right.tscn" id="7_duoxp"]
+[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man.tscn" id="7_duoxp"]
 [ext_resource type="Texture2D" uid="uid://dk8tvri3lfar3" path="res://imgs/decoracion/crate_06.png" id="8_nty5t"]
 [ext_resource type="PackedScene" uid="uid://xvb5gkug6jdh" path="res://Juego/interfaz_juego.tscn" id="9_52v38"]
+[ext_resource type="PackedScene" uid="uid://bp0xjrt6qj5xr" path="res://Juego/load_scene.tscn" id="10_qvom1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_526vn"]
 texture = ExtResource("4_spwk6")
@@ -108,6 +109,8 @@ format = 2
 layer_0/tile_data = PackedInt32Array(393228, 1, 0, 458764, 1, 0, 524300, 1, 0, 589836, 1, 0, 655372, 1, 0, 720908, 1, 0, 786444, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851986, 1, 0, 851987, 1, 0, 786451, 1, 0, 720915, 1, 0, 655379, 1, 0, 655378, 1, 0, 589842, 1, 0, 524306, 1, 0, 458770, 1, 0, 393234, 1, 0, 327698, 1, 0, 393229, 1, 0, 393230, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 524301, 1, 0, 524302, 1, 0, 589838, 1, 0, 655374, 1, 0, 589839, 1, 0)
 
 [node name="interfaz" parent="." instance=ExtResource("9_52v38")]
+
+[node name="Load_scene" parent="." instance=ExtResource("10_qvom1")]
 
 [connection signal="time_updated" from="GameController" to="interfaz" method="_on_game_controller_time_updated"]
 [connection signal="timeout" from="GameController/Timer" to="GameController" method="_on_timer_timeout"]

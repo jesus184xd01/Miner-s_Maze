@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bfx3qc003jnmb" path="res://Juego/background_image.tscn" id="2_f3rft"]
 [ext_resource type="PackedScene" uid="uid://b6oru4xdv478s" path="res://pisos/arena_floor.tscn" id="3_txnpi"]
 [ext_resource type="PackedScene" uid="uid://b0b1orvc1aqcr" path="res://Puntos/red_point.tscn" id="4_4x3dp"]
-[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man_right.tscn" id="5_kqvs8"]
+[ext_resource type="PackedScene" uid="uid://cjrj2ff7xeoxh" path="res://Personajes/man.tscn" id="5_kqvs8"]
 [ext_resource type="PackedScene" uid="uid://br5ta3woshc35" path="res://Cajas/brown_box.tscn" id="6_f1bna"]
 [ext_resource type="Script" uid="uid://dd2h55g6hqiai" path="res://Juego/game_controller.gd" id="7_qvoa0"]
 [ext_resource type="PackedScene" uid="uid://xvb5gkug6jdh" path="res://Juego/interfaz_juego.tscn" id="8_bh3na"]

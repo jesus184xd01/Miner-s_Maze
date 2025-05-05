@@ -7,9 +7,10 @@ extends Control
 @onready var percent_music_label: Label = $PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds/PercentMusicLabel
 @onready var percent_sound_label: Label = $PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerSounds/MarginContainer/GridCSounds/PercentSoundLabel
 
-
+@onready var music_label: Label = $PcontainerBackgroundPause/MarginAllelements/VMain/PcontainerButtons2/MarginContainer2/HButtons/MusicLabel
 
 func _ready() -> void:
+	music_label.text = "Song " + str(GLOBAL.num_song)
 	h_scroll_music.value = GLOBAL.volume_music
 	h_scroll_sound.value = GLOBAL.volume_sound
 
@@ -33,3 +34,11 @@ func _on_h_scroll_music_value_changed(value: float) -> void:
 		GLOBAL.music_instantiate.volume_linear = value / 100
 	
 	percent_music_label.text = str(int(round(value))) + "%"
+
+
+func _on_backsong_button_pressed() -> void:
+	music_label.text = "Song " + str(GLOBAL.num_song)
+
+
+func _on_nextsong_button_pressed() -> void:
+	music_label.text = "Song " + str(GLOBAL.num_song)

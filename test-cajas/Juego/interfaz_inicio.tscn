@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://jgfk5834e7w3"]
+[gd_scene load_steps=6 format=3 uid="uid://jgfk5834e7w3"]
 
 [ext_resource type="VideoStream" uid="uid://cnqhbftruuj2e" path="res://imgs/fondos/sword_minecraft.ogv" id="1_hmv5n"]
 [ext_resource type="Script" uid="uid://h071fu8bkl2v" path="res://Juego/interfaz_inicio.gd" id="1_x6we6"]
 [ext_resource type="Theme" uid="uid://dvn4o5wjsqjh3" path="res://themes/theme_inicio.tres" id="2_wobqu"]
 [ext_resource type="Script" uid="uid://cscsdf2p0dngr" path="res://Juego/title_label.gd" id="3_lti2r"]
+[ext_resource type="PackedScene" uid="uid://bp0xjrt6qj5xr" path="res://Juego/load_scene.tscn" id="5_2ehkn"]
 
 [node name="Interfaz_inicio" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_x6we6")
 
 [node name="FondoVideo" type="VideoStreamPlayer" parent="."]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,6 +72,8 @@ text = "Changue character"
 [node name="options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Options"
+
+[node name="Load_scene" parent="." instance=ExtResource("5_2ehkn")]
 
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/selec" to="." method="_on_selec_pressed"]

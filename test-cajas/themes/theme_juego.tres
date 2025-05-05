@@ -1,9 +1,13 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://drpdhwp0ewgo"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://drpdhwp0ewgo"]
 
 [ext_resource type="FontFile" uid="uid://b5dgt6qld4rl3" path="res://fuentes/Pixeboy.ttf" id="1_p7qvh"]
 [ext_resource type="Texture2D" uid="uid://dosw53qpm12rf" path="res://imgs/interfaces/panel-transparent-center-028.png" id="3_ie3m8"]
 [ext_resource type="Texture2D" uid="uid://eln8cr5jd0ce" path="res://imgs/interfaces/settings_backgound1.png" id="3_odbv3"]
 [ext_resource type="Texture2D" uid="uid://dk5tng8iuxh8h" path="res://imgs/interfaces/panel-000.png" id="3_vwit3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ie3m8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhwii"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ie3m8"]
 content_margin_right = 20.0
@@ -58,6 +62,8 @@ modulate_color = Color(0.382553, 0.677513, 0.124451, 1)
 [resource]
 Button/font_sizes/font_size = 42
 Button/fonts/font = ExtResource("1_p7qvh")
+Button/styles/focus = SubResource("StyleBoxEmpty_ie3m8")
+Button/styles/hover = SubResource("StyleBoxFlat_fhwii")
 HScrollBar/styles/grabber = SubResource("StyleBoxFlat_ie3m8")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_odbv3")
 Label/colors/font_color = Color(1, 1, 1, 1)

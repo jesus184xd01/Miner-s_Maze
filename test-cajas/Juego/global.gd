@@ -5,16 +5,18 @@ const levels = ["res://Niveles/level_1.tscn", "res://Niveles/level_2.tscn", "res
 const scene_win = "res://Juego/interfaz_win.tscn"
 const scene_lose = "res://Juego/interfaz_lose.tscn"
 const scene_prox = "res://proximamente/proximamente.tscn"
-const scene_pause = "res://Juego/interfaz_settings.tscn"
+const scene_pause = "res://Juego/interfaz_pause.tscn"
 const scene_start = "res://Juego/interfaz_inicio.tscn"
 const scene_select_level = "res://Juego/interfaz_menu_seleccion_niveles.tscn"
+const scene_options = "res://Juego/interfaz_options.tscn"
 
 #musica y sonido
+var songs = ["res://musica/A Sweet Smile - Yu-Peng Chen.mp3", "res://musica/Rite of Battle - Yu-Peng Chen.mp3"]
+var num_song: int = 1 # cancion por predeterminado
 const scene_background_music = "res://Audio/background_music.tscn"
 const scene_sonido_selec_menu = "res://Audio/Sonido_SelecMenu.tscn"
 var music_path = "res://musica/A Sweet Smile - Yu-Peng Chen.mp3"
 var music_instantiate: AudioStreamPlayer
-var sound_instantiate: AudioStreamPlayer
 var volume_sound: float = 50
 var volume_music: float = 50
 
